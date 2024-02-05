@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: cluster-proxy-addon
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/crt-redhat-acm-tenant/mce-25/cluster-proxy-addon@sha256:e6dd8c22705c41e01b24a5b3d3c95529ee18264c7dea46d34ab0371379698bb8
+        name: container-image
+        resources: {}
+status: {}
