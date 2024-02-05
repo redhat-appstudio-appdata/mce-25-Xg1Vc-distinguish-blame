@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: clusterlifecycle-state-metrics
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/crt-redhat-acm-tenant/mce-25/clusterlifecycle-state-metrics@sha256:62096f47dd50e32b88c80ef3d4d89289e39769fadca7cdbd6798708fa4bae25b
+        name: container-image
+        resources: {}
+status: {}
