@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: cluster-api-provider-kubevirt
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/crt-redhat-acm-tenant/mce-25/cluster-api-provider-kubevirt@sha256:97279d1bff6c7b4f513fcb1e47889ff704353602295e0b018d4382511d245cf8
+        name: container-image
+        resources: {}
+status: {}
